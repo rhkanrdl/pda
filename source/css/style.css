@@ -1913,7 +1913,7 @@ body ul {
   margin: 0;
   padding: 0;
 }
-body header {
+body #layout-header {
   position: fixed;
   left: 0;
   right: 0;
@@ -1922,11 +1922,13 @@ body header {
   line-height: 50px;
   background: #0075bc;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
-}
-body header .container {
   text-align: center;
 }
-body header .container h1 {
+body #layout-header .container {
+  text-align: center;
+}
+body #layout-header .container a {
+  display: block;
   position: absolute;
   left: 10px;
   top: 50%;
@@ -1935,13 +1937,10 @@ body header .container h1 {
   margin: 0;
   width: 36px;
   height: 36px;
-}
-body header .container h1 a {
-  display: block;
   height: 36px;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' style='fill: rgba(255, 255, 255, 1);transform: ;msFilter:;'%3E%3Cpath d='m21.743 12.331-9-10c-.379-.422-1.107-.422-1.486 0l-9 10a.998.998 0 0 0-.17 1.076c.16.361.518.593.913.593h2v7a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-4h4v4a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-7h2a.998.998 0 0 0 .743-1.669z'%3E%3C/path%3E%3C/svg%3E") no-repeat center/auto 26px;
 }
-body header .container h2 {
+body #layout-header .container strong {
   margin: 0;
   color: #fff;
   font-weight: 600;
@@ -1979,6 +1978,6 @@ body div#content section.button-set a.sub,
 body div#content section.button-set button.sub {
   background: #4b9b0a;
 }
-body footer#footer {
+body footer#layout-footer {
   display: none;
 }/*# sourceMappingURL=style.css.map */
