@@ -62,7 +62,7 @@ $screen-size-pc: 1200px;
 * {
 	@include box-sizing;
 }
-s
+
 input[type="password"] {
 	font-family: sans-serif;
 
@@ -97,6 +97,7 @@ select,
 textarea {
 	@include border-radius(0);
 	background:#fff;
+	outline:none;
 	/*
         @media all and (max-width: 1199px) {
             appearance: none;

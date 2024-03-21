@@ -510,13 +510,13 @@ div#content.sub05 div.sub-head.fix {
   box-sizing: border-box;
 }
 
-s input[type=password] {
+input[type=password] {
   font-family: sans-serif;
 }
-s input[type=password]::-moz-placeholder {
+input[type=password]::-moz-placeholder {
   font-family: "Noto Sans KR", "Malgun Gothic", "apple sd gothic neo", sans-serif;
 }
-s input[type=password]::placeholder {
+input[type=password]::placeholder {
   font-family: "Noto Sans KR", "Malgun Gothic", "apple sd gothic neo", sans-serif;
 }
 
@@ -549,6 +549,7 @@ textarea {
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
   background: #fff;
+  outline: none;
   /*
          @media all and (max-width: 1199px) {
              appearance: none;
@@ -1913,22 +1914,24 @@ body ul {
   margin: 0;
   padding: 0;
 }
-body #layout-header {
+body header {
   position: fixed;
   left: 0;
   right: 0;
   top: 0;
-  z-index: 2;
+  z-index: 999;
   line-height: 50px;
   background: #0075bc;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
   text-align: center;
 }
-body #layout-header .container {
+body header.out {
+  background: #4B9B0A;
+}
+body header .container {
   text-align: center;
 }
-body #layout-header .container a {
-  display: block;
+body header .container h1 {
   position: absolute;
   left: 10px;
   top: 50%;
@@ -1936,21 +1939,245 @@ body #layout-header .container a {
   font-size: 0;
   margin: 0;
   width: 36px;
-  height: 36px;
+}
+body header .container h1 a {
+  display: block;
   height: 36px;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' style='fill: rgba(255, 255, 255, 1);transform: ;msFilter:;'%3E%3Cpath d='m21.743 12.331-9-10c-.379-.422-1.107-.422-1.486 0l-9 10a.998.998 0 0 0-.17 1.076c.16.361.518.593.913.593h2v7a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-4h4v4a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-7h2a.998.998 0 0 0 .743-1.669z'%3E%3C/path%3E%3C/svg%3E") no-repeat center/auto 26px;
 }
-body #layout-header .container strong {
+body header .container h2 {
   margin: 0;
   color: #fff;
   font-weight: 600;
   font-size: 22px;
 }
 body div#content {
-  padding: 60px 10px;
+  padding: 60px 0;
+  min-height: 100vh;
+  background: #efefef;
+}
+body div#content section.form {
+  background: #fff;
+  padding: 15px;
+  margin: 20px 0;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+  font-size: 0;
+}
+body div#content section.form > div {
+  position: relative;
+  margin: 0 0 10px;
+  padding: 0;
+  font-size: 14px;
+}
+body div#content section.form > div.half {
+  display: inline-block;
+  width: calc(50% - 5px);
+}
+body div#content section.form > div.half.mr {
+  margin-right: 10px;
+}
+body div#content section.form > div strong {
+  position: relative;
+  display: block;
+  z-index: 2;
+  margin: 0 0 6px;
+  font-size: 14px;
+  font-weight: 14px;
+  font-weight: 500;
+}
+body div#content section.form > div div {
+  position: relative;
+  padding: 0 0 15px;
+  margin: 0;
+}
+body div#content section.form > div div:last-of-type {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+body div#content section.form > div div.period {
+  font-size: 0;
+}
+body div#content section.form > div div.period p {
+  display: inline-block;
+  margin: 0;
+  width: 45%;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #fafafa;
+}
+body div#content section.form > div div.period p input {
+  width: calc(100% - 30px);
+  border: none;
+  font-size: 14px;
+  background: transparent;
+  height: 38px;
+  padding: 0 0 0 10px;
+}
+body div#content section.form > div div.period p i {
+  text-align: center;
+  width: 30px;
+  font-size: 16px;
+  line-height: 38px;
+}
+body div#content section.form > div div.period span {
+  display: inline-block;
+  width: 10%;
+  text-align: center;
+  font-size: 14px;
+}
+body div#content section.form > div div.date {
+  font-size: 0;
+}
+body div#content section.form > div div.date p {
+  display: inline-block;
+  margin: 0;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #fafafa;
+}
+body div#content section.form > div div.date p input {
+  width: calc(100% - 30px);
+  border: none;
+  font-size: 14px;
+  background: transparent;
+  height: 38px;
+  padding: 0 0 0 10px;
+}
+body div#content section.form > div div.date p i {
+  text-align: center;
+  width: 30px;
+  font-size: 16px;
+  line-height: 38px;
+}
+body div#content section.form > div div.input p {
+  margin: 0;
+  font-weight: 600;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #fafafa;
+  overflow: hidden;
+}
+body div#content section.form > div div.input p input {
+  width: 100%;
+  border: none;
+  font-size: 14px;
+  background: transparent;
+  height: 38px;
+  padding: 0 10px;
+  text-align: center;
+}
+body div#content section.form > div div.input p input:-moz-read-only {
+  background: #e4e4e4;
+  color: #666;
+}
+body div#content section.form > div div.input p input:read-only {
+  background: #e4e4e4;
+  color: #666;
+}
+body div#content section.form > div div.input.half {
+  font-size: 0;
+}
+body div#content section.form > div div.input.half p {
+  display: inline-block;
+  width: 70%;
+}
+body div#content section.form > div div.input.half p:last-of-type {
+  width: 28%;
+  margin-left: 2%;
+}
+body div#content section.form > div div.number p {
+  margin: 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #fafafa;
+}
+body div#content section.form > div div.number p input {
+  width: 100%;
+  border: none;
+  font-size: 18px;
+  color: #0075bc;
+  background: transparent;
+  height: 38px;
+  padding: 0 10px;
+  text-align: center;
+}
+body div#content section.form > div div.select p {
+  margin: 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #fafafa;
+}
+body div#content section.form > div div.select p select {
+  width: 100%;
+  border: none;
+  font-size: 14px;
+  background: transparent;
+  height: 38px;
+  padding: 0 10px;
+}
+body div#content section.form button {
+  background: #444;
+  color: #fff;
+  margin: 0;
+  padding: 0 10px;
+  line-height: 42px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+  border-bottom: 3px solid #000;
+}
+body div#content section.grid {
+  background: #fff;
+  padding: 0;
+  margin: 20px 0;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+}
+body div#content section.grid p.title {
+  background: #222;
+  color: #fff;
+  line-height: 38px;
+  padding: 0 15px;
+  margin: 0;
+}
+body div#content section.grid p.title span {
+  padding: 0 10px;
+}
+body div#content section.grid p.title span strong {
+  color: #FFC017;
+}
+body div#content section.grid table {
+  width: 100%;
+  text-align: center;
+}
+body div#content section.grid table thead {
+  background: #333;
+}
+body div#content section.grid table thead tr th {
+  border-right: 1px solid #444;
+  border-bottom: 1px solid #444;
+  padding: 6px;
+  color: #eee;
+  font-weight: 400;
+}
+body div#content section.grid table tbody {
+  background: #FDFDF3;
+}
+body div#content section.grid table tbody:nth-of-type(odd) {
+  background: #FEFFE0;
+}
+body div#content section.grid table tbody tr td {
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 6px;
 }
 body div#content section.button-set {
   position: fixed;
+  z-index: 1000;
   left: 0;
   right: 0;
   bottom: 0;
@@ -1968,7 +2195,8 @@ body div#content section.button-set button {
   margin: 0;
   padding: 0 10px;
   line-height: 50px;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 500;
 }
 body div#content section.button-set a.main,
 body div#content section.button-set button.main {
@@ -1976,7 +2204,7 @@ body div#content section.button-set button.main {
 }
 body div#content section.button-set a.sub,
 body div#content section.button-set button.sub {
-  background: #4b9b0a;
+  background: #14547B;
 }
 body footer#layout-footer {
   display: none;
