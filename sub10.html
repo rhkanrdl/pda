@@ -29,7 +29,7 @@
         <h1><a href="">입/출고 관리 시스템</a></h1>
 
 
-        <h2>적치</h2>
+        <h2>출고조회</h2>
       </div>
     </header>
     <!-- E:header -->
@@ -41,82 +41,99 @@
       <section class="form">
 
           
-
-            <div>
-                <strong>로케이션</strong>
-                <div class="select">
-                <p>
-                    <select>
-                    <option>입고대기존</option>
-                    </select>
-                </p>
+          
+              <div>
+                <strong>출고일</strong>
+                <div class="period">
+                  <p>
+                    <input type="text">
+                    <i class='bx bx-calendar'></i>
+                  </p>
+                  <span>~</span>
+                  <p>
+                    <input type="text" title="">
+                    <i class='bx bx-calendar'></i>
+                  </p>
                 </div>
-            </div>
-          
-            <div>
-              <strong>상품바코드</strong>
-              <div class="input">
-                <p>
-                  <input type="text" readonly value="8212545645">
-                </p>
               </div>
-            </div>
 
-            <button>초기화</button>
-          
-          
-          
-        <div>
+              <div>
+                <strong>출고처</strong>
+                <div class="select">
+                  <p>
+                    <select>
+                      <option>전체</option>
+                    </select>
+                  </p>
+                </div>
+              </div>
+
+
+
+      </section>
+
+      <section class="grid">
+
+          <p class="title">
+            목록
+            <span>총 <strong>2</strong>건</span>
+          </p>
+
+          <table>
+            <thead>
+              <tr>
+                <th rowspan="2">NO</th>
+                <th>일자</th>
+                <th>출고처</th>
+                <th>상태</th>
+                <th>출고유형</th>
+              </tr>
+              <tr>
+                <th colspan="2">출고지시번호</th>
+                <th colspan="2">지시수량</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td rowspan="2">1</td>
+                <td>2024-02-16</td>
+                <td>제주공항</td>
+                <td>예정</td>
+                <td>국내판매</td>
+              </tr>
+              <tr>
+                <td colspan="2">I240216001</td>
+                <td colspan="2">120</td>
+              </tr>
+            </tbody>
+
+            <tbody>
+              <tr>
+                <td rowspan="2"2</td>
+                <td>2024-02-16</td>
+                <td>제주공항</td>
+                <td>예정</td>
+                <td>국내판매</td>
+              </tr>
+              <tr>
+                <td colspan="2">I240216001</td>
+                <td colspan="2">120</td>
+              </tr>
+            </tbody>
+
+
+          </table>
+
+
 
 
 
       </section>
 
 
-
-      <section class="grid">
-
-        <p class="title">
-          목록
-          <span>총 <strong>1</strong>건</span>
-        </p>
-
-        <table>
-          <thead>
-            <tr>
-              <th rowspan="2">NO</th>
-              <th colspan="3">상품명</th>
-            </tr>
-            <tr>
-              <th>상품코드</th>
-              <th>바코드</th>
-              <th>수량</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr>
-              <td rowspan="2">1</td>
-              <td colspan="3">감귤초콜렛</td>
-            </tr>
-            <tr>
-              <td>CGRF100</td>
-              <td>88234567</td>
-              <td>1,500</td>
-            </tr>
-          </tbody>
-
-
-        </table>
-
-
-
-
-
-    </section>
-
       <section class="button-set">
-        <a class="main" herf="">조회</a>
+        <button class="main">조회</button>
         <button>닫기</button>
       </section>
 

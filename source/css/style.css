@@ -1925,9 +1925,6 @@ body header {
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
   text-align: center;
 }
-body header.out {
-  background: #4B9B0A;
-}
 body header .container {
   text-align: center;
 }

@@ -68,10 +68,6 @@ body {
 		@include drop-shadow($x:0,$y: 3px, $blur: 6px, $spread: 0, $alpha: 0.16);
     text-align:center;
 
-    &.out {
-      background:#4B9B0A;
-    }
-
 
     .container {
 

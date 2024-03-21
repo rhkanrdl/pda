@@ -29,9 +29,9 @@
           <h1><a href="">입/출고 관리 시스템</a></h1>
   
   
-          <h2>입고검수</h2>
+          <h2>출고확정</h2>
         </div>
-    </header>
+      </header>
     <!-- E:header -->
 
 
@@ -42,105 +42,103 @@
 
           
             <div>
-              <strong>입고지시번호</strong>
-              <div class="input half">
+                <strong>출고지시번호</strong>
+                <div class="input half">
+                    <p>
+                        <input type="text" readonly value="I240216001">
+                    </p>
+                    <p>
+                        <input type="text" readonly value="홍길동">
+                    </p>
+                </div>
+            </div>
+          
+            <div>
+              <strong>상품코드</strong>
+              <div class="input">
                 <p>
                   <input type="text" readonly value="I240216001">
                 </p>
-                <p>
-                  <input type="text" readonly value="F001">
-                </p>
               </div>
             </div>
-
+          
             <div>
-              <strong>바코드</strong>
+              <strong>상품명</strong>
               <div class="input">
                 <p>
-                  <input type="text" value="I240216001">
+                  <input type="text" readonly value="감귤초코렛">
                 </p>
               </div>
             </div>
-            
+          
             <div>
-              <strong>상태</strong>
-              <div class="select">
+              <strong>유통기한</strong>
+              <div class="input">
                 <p>
-                  <select>
-                    <option>진행</option>
-                  </select>
+                  <input type="text" readonly value="2024-02-16">
                 </p>
               </div>
             </div>
-            
+          
+            <div class="half mr">
+              <strong>지시수량</strong>
+              <div class="input">
+                <p>
+                  <input type="text" readonly value="60">
+                </p>
+              </div>
+            </div>
+          
+            <div class="half">
+              <strong>입수</strong>
+              <div class="input">
+                <p>
+                  <input type="text" readonly value="10">
+                </p>
+              </div>
+            </div>
+          
+          
+        <div>
 
 
+
+      </section>
+
+      <section class="form">
+
+
+
+          
+            <div class="half mr">
+              <strong>BOX 수</strong>
+              <div class="input">
+                <p>
+                  <input type="text" value="0">
+                </p>
+              </div>
+            </div>
+          
+            <div class="half">
+              <strong>EA</strong>
+              <div class="input">
+                <p>
+                  <input type="text" value="60">
+                </p>
+              </div>
+            </div>
+          
+        <div>
 
 
 
       </section>
 
-      <section class="grid">
-
-          <p class="title">
-            목록
-            <span>총 <strong>2</strong>건</span>
-          </p>
-
-          <table>
-            <thead>
-              <tr>
-                <th rowspan="2">NO</th>
-                <th rowspan="2">상태</th>
-                <th colspan="4">상품명</th>
-              </tr>
-              <tr>
-                <th>상품코드</th>
-                <th>유통기한</th>
-                <th>예정량</th>
-                <th>입고량</th>
-              </tr>
-            </thead>
-
-            <tbody>
-              <tr>
-                <td rowspan="2">1</td>
-                <td rowspan="2">대기</td>
-                <td colspan="4">감귤초콜렛</td>
-              </tr>
-              <tr>
-                <td>CGRF100</td>
-                <td>20250831</td>
-                <td>60</td>
-                <td>0</td>
-              </tr>
-            </tbody>
-
-            <tbody>
-              <tr>
-                <td rowspan="2">2</td>
-                <td rowspan="2">대기</td>
-                <td colspan="4">감귤타르트</td>
-              </tr>
-              <tr>
-                <td>CGRF100</td>
-                <td>20250831</td>
-                <td>60</td>
-                <td>0</td>
-              </tr>
-            </tbody>
-
-          </table>
-
-
-
-
-
-      </section>
 
 
       <section class="button-set">
-        <a class="main" herf="">PLT 수정</a>
+        <a class="main" herf="">확정</a>
+        <a class="sub" herf="">확정취소</a>
         <button>닫기</button>
       </section>
 
