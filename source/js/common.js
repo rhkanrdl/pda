@@ -2,8 +2,14 @@ $(function () {
 
 
   $(".grid tbody").on("click", function(){
-    $(".grid tbody").removeClass("selected");
-    $(this).addClass("selected");
+
+    if($(this).hasClass("selected")) {
+      $(this).removeClass("selected");
+    } else {
+
+      $(".grid tbody").removeClass("selected");
+      $(this).addClass("selected");
+    }
   
   });
 
